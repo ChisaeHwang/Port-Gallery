@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+body {
+    overflow: hidden;
+    font-size: 16px;
+    font-family: 'Do Hyeon', sans-serif;
+  }
+
+main{
+    width: 100vw;
+    height: 100vh;
+
+    .backimg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 900px;
+        width: 1200px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(0, 0, 0, 0.5);
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+
+        .gallery{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        section {
+            position: absolute;
+            height: 100%;
+            width:100%;
+            overflow: hidden;
+            
+            .photoFrame {
+                position: absolute;
+                overflow: hidden;
+                width: 20%;
+                height: 30%;
+                top : 28%;
+                left: 41%;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(0, 0, 0, 0.5);
+    
+                .photo{
+                    position: absolute;
+                    width: 720px;
+                    height: 1280px;
+                    left: -250px;
+                    top: -500px;
+                    background: none;
+                    opacity: 0;
+                    transition: all 1.5;
+                    object-fit: cover;
+                    transform:scale(0.3 , 0.3)
+                }
+    
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+              }
+    
+        }
+        .lightShadow{
+            content: '';
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            position: fixed;
+            z-index: 1;
+            background: "black";
+            pointer-events: none;
+            transition : all 1.5s ease-in-out;
+        }
+
+        .backText{
+            position: absolute;
+            display: flex;
+            left: 47.5%;
+            top: 35%;
+            cursor: pointer;
+            z-index: 8;
+        }
+
+    }
+}
+
+
+.buttonWrap {
+    position: absolute;
+    bottom : 30px;
+    left: 50%;
+    transform : translateX(-50%);
+    button {
+        position : relative;
+        z-index : 100;
+        margin : 0 5px;
+        background:black;
+        color: #fff;
+        padding : 8px 22px;
+        transition: all .4s ease-out;
+
+        &:hover, &.active {
+            background-color: #970000;
+        }
+    }
+}
+
+canvas{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: -10rem;
+  }

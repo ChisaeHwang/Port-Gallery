@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+body {
+  overflow: hidden;
+  font-size: 16px;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+main .backimg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 900px;
+  width: 1200px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+main .backimg .gallery {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+main .backimg section {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+main .backimg section .photoFrame {
+  position: absolute;
+  overflow: hidden;
+  width: 20%;
+  height: 30%;
+  top: 28%;
+  left: 41%;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(0, 0, 0, 0.5);
+}
+
+main .backimg section .photoFrame .photo {
+  position: absolute;
+  width: 720px;
+  height: 1280px;
+  left: -250px;
+  top: -500px;
+  background: none;
+  opacity: 0;
+  -webkit-transition: all 1.5;
+  transition: all 1.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(0.3, 0.3);
+          transform: scale(0.3, 0.3);
+}
+
+main .backimg section .photoFrame img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+main .backimg .lightShadow {
+  content: '';
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 1;
+  background: "black";
+  pointer-events: none;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+
+main .backimg .backText {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 47.5%;
+  top: 35%;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.buttonWrap {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.buttonWrap button {
+  position: relative;
+  z-index: 100;
+  margin: 0 5px;
+  background: black;
+  color: #fff;
+  padding: 8px 20px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.buttonWrap button:hover, .buttonWrap button.active {
+  background-color: #970000;
+}
+
+canvas {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: -10rem;
+}
+/*# sourceMappingURL=style.css.map */
