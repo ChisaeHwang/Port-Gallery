@@ -14,13 +14,9 @@ console.log(galheight, galwidth);
 for(var i=0; i < zoomBtn.length; i++){
     (function(idx){
         zoomBtn[idx].onclick = function(){
-
-            console.log(zoom);
-
             if(pageNum == idx){
                  zoom = true;
             }
-            
             pageNum = idx;
             zoomFrame();
         }
@@ -37,6 +33,15 @@ function frameSetting(){
         })
     })
 }
+
+zoomBtn.forEach(function(item, i){
+    TweenMax.from(item, .4, {
+        top : 100,
+        autoAlpha : 0,
+        ease : Power3.easeInOut, 
+        delay : i * .1 + .5,
+    })
+})
 
 window.addEventListener('resize', function(){
     if(!zoom){
