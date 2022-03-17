@@ -15,6 +15,7 @@ var Svg = Matter.Svg;
 var Vertices = Matter.Vertices;
 
 document.write("<script src='js/tag.js' defer></script>");
+document.write("<script src='js/photoFrame.js'></script>");
 
 var engine = Engine.create();
 var world = engine.world;
@@ -132,12 +133,14 @@ Events.on(mouseConstraint, "mousedown", () => {
     const { body } = mouseConstraint;
     if (body){
       if(light){
-         offImg();
-      light = false;
+          offImg();
+          light = false;
+          reset();
+          pageNum = 4;
       }
       else if(!light){
-         changeImg();
-      light = true;
+          changeImg();
+          light = true;
       }
 
       console.log(light);
