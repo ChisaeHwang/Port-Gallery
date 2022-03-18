@@ -39,7 +39,7 @@ zoomBtn.forEach(function(item, i){
         top : 100,
         autoAlpha : 0,
         ease : Power3.easeInOut, 
-        delay : i * .1 + .5,
+        delay : i* .1 + .5,
     })
 })
 
@@ -60,7 +60,7 @@ function zoomFrame(){
         TweenMax.to(gallery, 1, {
             scale : (3, 3),
             ease : Power4.easeInOut, 
-            delay : .1
+            delay : .08
         })
 
         if(pageNum == 0){
@@ -70,7 +70,7 @@ function zoomFrame(){
                     left : galwidth / 2 + i * 1000 - 120,
                     scale : (2,2),
                     ease : Power4.easeInOut, 
-                    delay : .1
+                    delay : .08
                 })
             })
         }else if(pageNum == 1){
@@ -80,7 +80,7 @@ function zoomFrame(){
                     left : galwidth / 2 + i * 1000 - galwidth / 1.07,
                     scale : (2,2),
                     ease : Power4.easeInOut, 
-                    delay : .1
+                    delay : .08
                 })
             })
         }else if(pageNum == 2){
@@ -90,7 +90,7 @@ function zoomFrame(){
                     left : galwidth / 2 + i * 1000 - (galwidth * 1.76),
                     scale : (2,2),
                     ease : Power4.easeInOut, 
-                    delay : .1
+                    delay : .08
                 })
             })
         }
@@ -108,7 +108,7 @@ function reset(event){
         TweenMax.to(gallery, 1, {
             scale : (1, 1),
             ease : Power4.easeInOut, 
-            delay : .1
+            delay : .08
         })
         _frames.forEach(function(item, i){
             TweenMax.to(item, 1, {
@@ -116,7 +116,7 @@ function reset(event){
                 top : galheight / 2 - 200,
                 left : galwidth / 2 + i * 400 - 510,    
                 ease : Power4.easeInOut, 
-                delay : .1       
+                delay : .08       
             })
         })
     }
