@@ -20,7 +20,7 @@ function offImg(event){
 }
 
 function changeImg(event){
-     document.querySelector(".lightShadow").style.background = "radial-gradient(circle 20em at var(--lampX) var(--lampY), rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 80%,rgba(0,0,0,.95) 100%)";
+     document.querySelector(".lightShadow").style.background = "radial-gradient(circle 25em at var(--lampX) var(--lampY), rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 80%,rgba(0,0,0,.95) 100%)";
      document.querySelector(".lightShadow").style.transition = "all 1s ease-in-out";
      photoNum = Math.floor(Math.random() * photoArr.length);
      for (var i=0; i<photoArr.length; i++){
