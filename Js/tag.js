@@ -1,5 +1,6 @@
 const toDoText = document.querySelector(".backText");
 const takePhoto = document.querySelectorAll(".photo");
+const artBtn = document.querySelectorAll("button");
 
 var photoArr = ["photo1.png", "photo2.png", "photo3.png"];
 
@@ -17,6 +18,15 @@ function offImg(event){
           takePhoto[i].style.background = "none";
           takePhoto[i].style.opacity = "0"
      }
+
+     artBtn.forEach(function(item, i){
+          TweenMax.to(item, .4, {
+              top : -100,
+              autoAlpha : 1,
+              ease : Power3.easeInOut, 
+              delay : i* .1,
+          })
+     })
 }
 
 function changeImg(event){

@@ -99,7 +99,7 @@ main .backimg .backText {
 
 .buttonWrap {
   position: absolute;
-  bottom: 20px;
+  bottom: -50px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -111,9 +111,9 @@ main .backimg .backText {
   margin: 0 5px;
   background: black;
   color: #fff;
-  padding: 8px 20px;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  padding: 8px 22px;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
 }
 
 .buttonWrap button:hover, .buttonWrap button.active {
