@@ -1,6 +1,7 @@
 var _frames = document.querySelectorAll(".photoFrame");
 var gallery = document.querySelector(".gallery");
 var zoomBtn = document.querySelectorAll("button");
+var pageNext = document.querySelector(".backimg");
 var pageNum = 4; 
 
 let galwidth = $(gallery).width();
@@ -86,14 +87,22 @@ function zoomFrame(){
         }
 
         if(zoom){
-            reset();
+            reSet();
             zoom = false;
             pageNum = 4;
         }
         
 }
 
-function reset(event){
+function newPage(e){
+    TweenMax.to(pageNext, 1, {
+        scale:(10, 10),
+        ease : Power4.easeInOut, 
+        delay : .08
+    })
+}
+
+function reSet(event){
     if(pageNum == pageNum){
         TweenMax.to(gallery, 1, {
             scale : (1, 1),

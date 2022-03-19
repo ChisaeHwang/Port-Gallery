@@ -135,7 +135,7 @@ Events.on(mouseConstraint, "mousedown", () => {
       if(light){
           offImg();
           light = false;
-          reset();
+          reSet();
           pageNum = 4;
       }
       else if(!light){
