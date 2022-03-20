@@ -85,12 +85,11 @@ clickText[0].addEventListener("click", (e) => {
 }, false);
 
 function createLamp(){
-  group = Body.nextGroup(true);
 
-  var ropeB = Composites.stack(width/2, 100, 10, 1, 10, 10, function(x, y) {
-    return Bodies.rectangle(x , y, 15, 3, {
+  var ropeB = Composites.stack(width/2, 100, 10, 1, 20, 20, function(x, y) {
+    return Bodies.rectangle(x , y, 17, 3, {
       collisionFilter: { 
-       group: group 
+       group: -1
       }, 
       render : ropeRenderStyle
     });
@@ -109,7 +108,7 @@ function createLamp(){
   
   Composites.chain(ropeB, 0.5, 0, -0.5, 0, {
       stiffness: 0.8,
-      length: 1,
+      length: 0.5,
       render: ropeRenderStyle
     });
 
