@@ -11,6 +11,14 @@ let zoom = false;
 
 console.log(galheight, galwidth);
 
+window.onmousewheel = function(e){
+    if(e.wheelDelta > 0){
+        newPage()
+    }else{
+        newPage()
+    }
+}
+
 for(var i=0; i < zoomBtn.length; i++){
     (function(idx){
         zoomBtn[idx].onclick = function(){
@@ -98,7 +106,7 @@ function newPage(e){
     TweenMax.to(pageNext, 1, {
         scale:(10, 10),
         ease : Power4.easeInOut, 
-        delay : .08
+        delay : .08,
     })
 }
 
