@@ -7,23 +7,16 @@ var pageNum = 4;
 let galwidth = $(gallery).width();
 let galheight = $(gallery).height();
 
-let zoom = false;
+let btnOver = false;
+let zoom;
 
 console.log(galheight, galwidth);
-
-window.onmousewheel = function(e){
-    if(e.wheelDelta > 0){
-        newPage()
-    }else{
-        newPage()
-    }
-}
 
 for(var i=0; i < zoomBtn.length; i++){
     (function(idx){
         zoomBtn[idx].onclick = function(){
             if(pageNum == idx){
-                 zoom = true;
+                 btnOver= true;              
             }
             pageNum = idx;
             zoomFrame();
@@ -56,6 +49,9 @@ function resize(){
 
 // button 위치에 따라 left값 수정
 function zoomFrame(){
+
+    zoom = true;
+
         TweenMax.to(gallery, .75, {
             scale : (3, 3),
             ease : Power4.easeInOut, 
@@ -94,12 +90,23 @@ function zoomFrame(){
             })
         }
 
-        if(zoom){
+        if(btnOver){
             reSet();
             zoom = false;
+            btnOver = false;
             pageNum = 4;
+            console.log(zoom);
         }
-        
+}
+
+function scrollNext(){
+    window.onmousewheel = function(e){
+        if(e.wheelDelta > 0){
+            newPage();
+        }else{
+            newPage();
+        }
+    }
 }
 
 function newPage(e){

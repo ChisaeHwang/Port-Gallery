@@ -139,6 +139,8 @@ Events.on(mouseConstraint, "mousedown", () => {
       }
       else if(!light){
           changeImg();
+          if(zoom)
+          scrollNext();
           light = true;
       }
 
