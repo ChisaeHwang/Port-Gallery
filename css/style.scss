@@ -85,6 +85,15 @@ main{
             z-index: 8;
         }
 
+        .textCursor{
+            position: absolute;
+            display: flex;
+            left: 45%;
+            top: 38%;
+            font-size: 40px;
+            z-index: 8;
+        }
+
     }
 }
 

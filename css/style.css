@@ -97,6 +97,17 @@ main .backimg .backText {
   z-index: 8;
 }
 
+main .backimg .textCursor {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 45%;
+  top: 38%;
+  font-size: 40px;
+  z-index: 8;
+}
+
 .buttonWrap {
   position: absolute;
   bottom: -50px;
