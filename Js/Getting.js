@@ -118,7 +118,7 @@ function createLamp(){
 function lightPosition(){
     if (lamp) {
         const x = lamp.position.x;
-        const y = lamp.position.y + 130;
+        const y = lamp.position.y + 110;
 
         document.documentElement.style.setProperty(
           '--lampX', x + 'px')
