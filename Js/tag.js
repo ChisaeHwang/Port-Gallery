@@ -3,7 +3,7 @@ const toDoCursor = document.querySelector(".textCursor");
 const takePhoto = document.querySelectorAll(".photo");
 const artBtn = document.querySelectorAll("button");
 
-var photoArr = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+var photoArr = ["photo1.png", "photo2.png", "photo3.png"];
 
 function deleteToDo(event){
      toDoText.remove();
