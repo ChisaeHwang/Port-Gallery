@@ -16,7 +16,7 @@ for(var i=0; i<zoomBtn.length; i++){
     (function(idx){
         zoomBtn[idx].onclick = function(){
             if(pageNum == idx){
-                 btnOver= true;              
+                 btnOver= true;             
             }
             pageNum = idx;
             zoomFrame();
@@ -66,6 +66,7 @@ function zoomFrame(){
                     delay : .08
                 })
             })
+            redFrame();
         }else if(pageNum == 1){
             frames.forEach(function(item, i){
                 TweenMax.to(item, .75, {
@@ -76,6 +77,7 @@ function zoomFrame(){
                     delay : .08
                 })
             })
+            redFrame();
         }else if(pageNum == 2){
             frames.forEach(function(item, i){
                 TweenMax.to(item, .75, {
@@ -86,33 +88,37 @@ function zoomFrame(){
                     delay : .08
                 })
             })
+            redFrame();
         }
-
         if(btnOver){
             reSet();
             zoom = false;
             btnOver = false;
             pageNum = 4;
             console.log(zoom);
+            enlFrame();
+            
         }
 }
 
-function scrollNext(){
-    window.onmousewheel = function(e){
-        if(e.wheelDelta > 0){
-            newPage();
-        }else{
-            newPage();
-        }
-    }
+function redFrame(){
+    document.querySelector("canvas").style.pointerEvents = "none";
+    document.querySelector("canvas").style.zIndex = 11;
+    document.querySelector("canvas").style.transitionDelay = "0.3s";
+}
+
+function enlFrame(){
+    document.querySelector("canvas").style.pointerEvents = "auto";
+    document.querySelector("canvas").style.zIndex = 9;
+    document.querySelector("canvas").style.transitionDelay = "1s";
 }
 
 function newPage (e) {
-    TweenMax.to(pageNext, 1, {
-        scale:(10, 10),
-        ease : Power4.easeInOut, 
-        delay : .08,
-    })
+        TweenMax.to(pageNext, 1, {
+            scale:(10, 10),
+            ease : Power4.easeInOut, 
+            delay : .08,
+        })
 }
 
 function reSet(event){
