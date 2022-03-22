@@ -1,4 +1,4 @@
-var _frames = document.querySelectorAll(".photoFrame");
+var frames = document.querySelectorAll(".photoFrame");
 var gallery = document.querySelector(".gallery");
 var zoomBtn = document.querySelectorAll("button");
 var pageNext = document.querySelector(".backimg");
@@ -12,7 +12,7 @@ let zoom;
 
 console.log(galheight, galwidth);
 
-for(var i=0; i < zoomBtn.length; i++){
+for(var i=0; i<zoomBtn.length; i++){
     (function(idx){
         zoomBtn[idx].onclick = function(){
             if(pageNum == idx){
@@ -24,10 +24,8 @@ for(var i=0; i < zoomBtn.length; i++){
     })(i);
 }
 
-TweenMax.set("section", {perspective: 400});
-
 function frameSetting(){
-    _frames.forEach(function(item, i){
+    frames.forEach(function(item, i){
         TweenMax.to(item, 0, {
             top : galheight / 2 - 200,
             left : galwidth / 2 + i * 400 - 510,             
@@ -59,7 +57,7 @@ function zoomFrame(){
         })
 
         if(pageNum == 0){
-            _frames.forEach(function(item, i){
+            frames.forEach(function(item, i){
                 TweenMax.to(item, .75, {
                     top : galheight / 2 - 200,
                     left : galwidth / 2 + i * 1000 - 120,
@@ -69,7 +67,7 @@ function zoomFrame(){
                 })
             })
         }else if(pageNum == 1){
-            _frames.forEach(function(item, i){
+            frames.forEach(function(item, i){
                 TweenMax.to(item, .75, {
                     top : galheight / 2 - 200,
                     left : galwidth / 2 + i * 1000 - galwidth / 1.07,
@@ -79,7 +77,7 @@ function zoomFrame(){
                 })
             })
         }else if(pageNum == 2){
-            _frames.forEach(function(item, i){
+            frames.forEach(function(item, i){
                 TweenMax.to(item, .75, {
                     top : galheight / 2 - 200,
                     left : galwidth / 2 + i * 1000 - (galwidth * 1.76),
@@ -109,7 +107,7 @@ function scrollNext(){
     }
 }
 
-function newPage(e){
+function newPage (e) {
     TweenMax.to(pageNext, 1, {
         scale:(10, 10),
         ease : Power4.easeInOut, 
@@ -124,7 +122,7 @@ function reSet(event){
             ease : Power4.easeInOut, 
             delay : .08
         })
-        _frames.forEach(function(item, i){
+        frames.forEach(function(item, i){
             TweenMax.to(item, 1, {
                 scale : (1, 1),
                 top : galheight / 2 - 200,

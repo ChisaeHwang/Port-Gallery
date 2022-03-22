@@ -19,23 +19,24 @@
         <div class="backimg">
             <img src="img/artgallery.png" class="gallery">
             <div class="lightShadow"></div>
-            <section>
-                <div class="photoFrame">
-                    <a href=" " target="blank" class="photo"></a>
-                    <img src="img/photoFrame.png">
-                </div>
-                <div class="photoFrame">
-                    <div class="photo"></div>
-                    <img src="img/photoFrame.png">
-                </div>
-                <div class="photoFrame">
-                    <div class="photo"></div>
-                    <img src="img/photoFrame.png">
-                </div>
-            </section>
+
+            <div class="photoFrame" onclick="newPage()">
+                <div class="photo"></div>
+                <img src="img/photoFrame.png">
+            </div>
+            <div class="photoFrame" onclick="newPage()">
+                <div class="photo"></div>
+                <img src="img/photoFrame.png">
+            </div>
+            <div class="photoFrame" onclick="newPage()">
+                <div class="photo"></div>
+                <img src="img/photoFrame.png">
+            </div>
+
+
             <a class="backText" target="_blank">Cliked me</a>  
             <a class="textCursor">↗</a>
-        </div>   
+        </div> 
     </main>
 
     <div class="buttonWrap">
@@ -43,10 +44,11 @@
         <button type="button">Art 2</button>
         <button type="button">Art 3</button>
     </div>
+
+
+    <script src="js/tag.js"></script>
+    <script src="js/photoFrame.js"></script>
         
 </body>
-
-<script src="js/tag.js"></script>
-<script src="js/photoFrame.js"></script>
 
 </html>

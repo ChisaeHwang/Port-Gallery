@@ -5,19 +5,20 @@ const artBtn = document.querySelectorAll("button");
 
 var photoArr = ["photo1.png", "photo2.png", "photo3.png"];
 
-function* infinity(i = 0) {
-     while (true) yield i++;
-}
+function* countNum(i) {
 
-function* limit(l, iter) {
-     for (const a of iter) {
-       yield a;
-       if (a == l) return;
+     function* infinity(i = 0) {
+          while (true) yield i++;
      }
-}
 
-function* countNum(l) {
-     for (const a of limit(l.length - 1, infinity())) {
+     function* limit(i, num) {
+          for (const a of num) {
+            yield a;
+            if (a == i) return;
+          }
+     }
+
+     for (const a of limit(i.length - 1, infinity())) {
        yield a;
      }
 }
@@ -28,6 +29,10 @@ function deleteToDo(event){
      i = Math.round(Math.random() * photoArr.length);
      console.log(i);
      offImg();
+     for (const i of countNum(photoArr)){
+          document.querySelectorAll(".photoFrame")[i].style.zIndex = 10;
+          document.querySelector("canvas").style.zIndex = 9;
+     }
 }
 
 function offImg(event){
@@ -53,7 +58,7 @@ function changeImg(event){
      document.querySelector(".lightShadow").style.transition = "all 1s ease-in-out";
      photoNum = Math.floor(Math.random() * photoArr.length);
      for (const i of countNum(photoArr)){
-          takePhoto[i].style.opacity = "1"
+          takePhoto[i].style.opacity = "1";
      }
 
      switch(photoNum){
