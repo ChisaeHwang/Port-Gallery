@@ -136,12 +136,19 @@ Events.on(mouseConstraint, "mousedown", () => {
           light = false;
           reSet();
           pageNum = 4;
+
+          for(var i=0; i<frames.length; i++){
+            frames[i].style.cursor = "auto";
+              frames[i].onclick = function(){
+                return;
+            }
+          }
       }
       else if(!light){
           changeImg();
-          if(zoom)
-          scrollNext();
           light = true;
+          nextSite();
+
       }
 
       console.log(light);

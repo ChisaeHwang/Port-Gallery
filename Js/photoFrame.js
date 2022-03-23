@@ -12,18 +12,17 @@ let zoom;
 
 console.log(galheight, galwidth);
 
-for(var i=0; i<frames.length; i++){
-   frames[i].onclick = function(){
-       newPage();
-   }
-}
-
 for(var i=0; i<zoomBtn.length; i++){
     (function(idx){
         zoomBtn[idx].onclick = function(){
             if(pageNum == idx){
-                 btnOver= true;             
+                 btnOver= true;          
             }
+
+            if(!zoom){
+                zoom = true;
+            }
+
             pageNum = idx;
             zoomFrame();
         }
@@ -53,8 +52,6 @@ function resize(){
 
 // button 위치에 따라 left값 수정
 function zoomFrame(){
-
-    zoom = true;
 
         TweenMax.to(gallery, .75, {
             scale : (3, 3),
@@ -96,6 +93,7 @@ function zoomFrame(){
             })
             redFrame();
         }
+
         if(btnOver){
             reSet();
             zoom = false;
@@ -103,7 +101,6 @@ function zoomFrame(){
             pageNum = 4;
             console.log(zoom);
             enlFrame();
-            
         }
 }
 
@@ -117,14 +114,6 @@ function enlFrame(){
     document.querySelector("canvas").style.pointerEvents = "auto";
     document.querySelector("canvas").style.zIndex = 9;
     document.querySelector("canvas").style.transitionDelay = "1s";
-}
-
-function newPage (e) {
-        TweenMax.to(pageNext, 1, {
-            scale:(10, 10),
-            ease : Power4.easeInOut, 
-            delay : .08,
-        })
 }
 
 function reSet(event){
@@ -144,6 +133,23 @@ function reSet(event){
             })
         })
     }
+}
+
+function nextSite (e) {
+    for(var i=0; i<frames.length; i++){
+        frames[i].style.cursor = "pointer";
+        frames[i].onclick = function(){
+            zoomPage();
+        }
+    }
+}
+
+function zoomPage (e) {
+    TweenMax.to(pageNext, 1, {
+        scale:(10, 10),
+        ease : Power4.easeInOut, 
+        delay : .08,
+    })
 }
 
 resize();
