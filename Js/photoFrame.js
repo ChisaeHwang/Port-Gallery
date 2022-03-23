@@ -12,6 +12,12 @@ let zoom;
 
 console.log(galheight, galwidth);
 
+for(var i=0; i<frames.length; i++){
+   frames[i].onclick = function(){
+       newPage();
+   }
+}
+
 for(var i=0; i<zoomBtn.length; i++){
     (function(idx){
         zoomBtn[idx].onclick = function(){
