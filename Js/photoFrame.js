@@ -102,14 +102,20 @@ function redFrame(){
     document.querySelector("canvas").style.pointerEvents = "none";
     document.querySelector("canvas").style.zIndex = 11;
     document.querySelector("canvas").style.transitionDelay = "0.3s";
-    zoom = true;
+    nextSite();
 }
 
 function enlFrame(){
     document.querySelector("canvas").style.pointerEvents = "auto";
     document.querySelector("canvas").style.zIndex = 9;
     document.querySelector("canvas").style.transitionDelay = "1s";
-    zoom = false;
+    
+    for(var i=0; i<frames.length; i++){
+        frames[i].style.cursor = "auto";
+          frames[i].onclick = function(){
+            return;
+        }
+      }
 }
 
 function reSet(event){
@@ -128,12 +134,6 @@ function reSet(event){
                 delay : .08       
             })
         })
-    }
-}
-
-if(light){
-       if(zoom){
-         nextSite();
     }
 }
 

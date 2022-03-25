@@ -147,8 +147,6 @@ Events.on(mouseConstraint, "mousedown", () => {
           changeImg();
           light = true;
 
-            nextSite();
-
       }
 
       console.log(light);
