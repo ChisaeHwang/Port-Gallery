@@ -136,12 +136,7 @@ Events.on(mouseConstraint, "mousedown", () => {
           pageNum = 4;
 
           // light off 시 클릭 중단
-          for(var i=0; i<frames.length; i++){
-            frames[i].style.cursor = "auto";
-              frames[i].onclick = function(){
-                return;
-            }
-          }
+          setInterval(noneClick, 100);
       }
       else if(!light){
           changeImg();
@@ -153,6 +148,15 @@ Events.on(mouseConstraint, "mousedown", () => {
 
     }
     });
+}
+
+function noneClick() {
+  for(var i=0; i<frames.length; i++){
+    frames[i].style.cursor = "auto";
+      frames[i].onclick = function(){
+        return;
+    }
+  }
 }
 
 
