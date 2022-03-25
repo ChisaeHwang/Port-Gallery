@@ -1,7 +1,7 @@
 var frames = document.querySelectorAll(".photoFrame");
 var gallery = document.querySelector(".gallery");
 var zoomBtn = document.querySelectorAll("button");
-var pageNext = document.querySelector(".backimg");
+const pageNext = document.querySelector(".backimg");
 var pageNum = 4; 
 
 let galwidth = $(gallery).width();
@@ -17,10 +17,6 @@ for(var i=0; i<zoomBtn.length; i++){
         zoomBtn[idx].onclick = function(){
             if(pageNum == idx){
                  btnOver= true;          
-            }
-
-            if(!zoom){
-                zoom = true;
             }
 
             pageNum = idx;
@@ -96,10 +92,8 @@ function zoomFrame(){
 
         if(btnOver){
             reSet();
-            zoom = false;
             btnOver = false;
             pageNum = 4;
-            console.log(zoom);
             enlFrame();
         }
 }
@@ -108,12 +102,14 @@ function redFrame(){
     document.querySelector("canvas").style.pointerEvents = "none";
     document.querySelector("canvas").style.zIndex = 11;
     document.querySelector("canvas").style.transitionDelay = "0.3s";
+    zoom = true;
 }
 
 function enlFrame(){
     document.querySelector("canvas").style.pointerEvents = "auto";
     document.querySelector("canvas").style.zIndex = 9;
     document.querySelector("canvas").style.transitionDelay = "1s";
+    zoom = false;
 }
 
 function reSet(event){
@@ -132,6 +128,12 @@ function reSet(event){
                 delay : .08       
             })
         })
+    }
+}
+
+if(light){
+       if(zoom){
+         nextSite();
     }
 }
 

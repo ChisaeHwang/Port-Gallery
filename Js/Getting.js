@@ -19,14 +19,12 @@ document.write("<script src='js/photoFrame.js'></script>");
 
 var engine = Engine.create();
 var world = engine.world;
-engine.world.gravity.y = 2.5;
-
-const backimg = document.querySelector('.backimg');
+engine.world.gravity.y = 2.5;;
 
 let light = false;
 
-let width = $(backimg).width();
-let height = $(backimg).height();
+let width = $(pageNext).width();
+let height = $(pageNext).height();
 
 var lamp = Bodies.circle(width/2, 210, 20, {
   density: 0.0005,
@@ -137,6 +135,7 @@ Events.on(mouseConstraint, "mousedown", () => {
           reSet();
           pageNum = 4;
 
+          // light off 시 클릭 중단
           for(var i=0; i<frames.length; i++){
             frames[i].style.cursor = "auto";
               frames[i].onclick = function(){
@@ -147,7 +146,8 @@ Events.on(mouseConstraint, "mousedown", () => {
       else if(!light){
           changeImg();
           light = true;
-          nextSite();
+
+            nextSite();
 
       }
 
