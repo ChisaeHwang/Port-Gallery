@@ -125,6 +125,15 @@ function lightPosition(){
     }
 }
 
+let noneClick = setInterval(function() {
+  for(var i=0; i<frames.length; i++){
+    frames[i].style.cursor = "auto";
+      frames[i].onclick = function(){
+        return;
+    }
+  }
+}, 100);
+
 function grabLamp(){
 Events.on(mouseConstraint, "mousedown", () => {
     const { body } = mouseConstraint;
@@ -135,11 +144,21 @@ Events.on(mouseConstraint, "mousedown", () => {
           reSet();
           pageNum = 4;
 
+          noneClick = setInterval(function() {
+            for(var i=0; i<frames.length; i++){
+              frames[i].style.cursor = "auto";
+                frames[i].onclick = function(){
+                  return;
+              }
+            }
+          }, 100);
+
           // light off 시 클릭 중단
-          setInterval(noneClick, 100);
       }
       else if(!light){
           changeImg();
+          clearInterval(noneClick);
+          
           light = true;
 
       }
@@ -148,15 +167,6 @@ Events.on(mouseConstraint, "mousedown", () => {
 
     }
     });
-}
-
-function noneClick() {
-  for(var i=0; i<frames.length; i++){
-    frames[i].style.cursor = "auto";
-      frames[i].onclick = function(){
-        return;
-    }
-  }
 }
 
 
