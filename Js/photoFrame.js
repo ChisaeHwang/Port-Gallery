@@ -2,6 +2,7 @@ var frames = document.querySelectorAll(".photoFrame");
 var gallery = document.querySelector(".gallery");
 var zoomBtn = document.querySelectorAll("button");
 const pageNext = document.querySelector(".backimg");
+const fadeIn = document.querySelector(".all");
 var pageNum = 4; 
 
 let galwidth = $(gallery).width();
@@ -29,7 +30,7 @@ function frameSetting(){
     frames.forEach(function(item, i){
         TweenMax.to(item, 0, {
             top : galheight / 2 - 200,
-            left : galwidth / 2 + i * 400 - 510,             
+            left : galwidth / 2 + i * 400 - 510,        
         })
     })
 }
@@ -146,15 +147,24 @@ function nextSite (e) {
     }
 }
 
+
 function zoomPage (e) {
     TweenMax.to(pageNext, 1, {
         scale:(10, 10),
         ease : Power4.easeInOut, 
-        delay : .08,
     })
+
+    TweenMax.to(fadeIn, 0.6 , {
+        backgroundColor:"black", 
+        opacity: 1,
+        zIndex: 100,
+        ease : Power4.easeInOut, 
+    })
+    
+
     setTimeout(function(){
         window.location.href = "C:/Users/Administrator/git/Interactive_site/newsite.html";
-    }, 500);
+    }, 700);
 }
 
 resize();

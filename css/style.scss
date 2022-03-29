@@ -4,7 +4,13 @@ body {
     overflow: hidden;
     font-size: 16px;
     font-family: 'Do Hyeon', sans-serif;
-  }
+}
+
+.all{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
 
 main{
     width: 100vw;
