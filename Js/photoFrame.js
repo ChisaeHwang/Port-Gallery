@@ -153,7 +153,7 @@ function zoomPage (e) {
         delay : .08,
     })
     setTimeout(function(){
-        window.location.href = "https://cafe.naver.com/steamindiegame";
+        window.location.href = "C:/Users/Administrator/git/Interactive_site/newsite.html";
     }, 500);
 }
 
