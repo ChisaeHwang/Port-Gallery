@@ -152,6 +152,9 @@ function zoomPage (e) {
         ease : Power4.easeInOut, 
         delay : .08,
     })
+    setTimeout(function(){
+        window.location.href = "https://cafe.naver.com/steamindiegame";
+    }, 500);
 }
 
 resize();
