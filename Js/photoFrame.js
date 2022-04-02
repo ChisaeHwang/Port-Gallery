@@ -149,10 +149,6 @@ function nextSite (e) {
 
 
 function zoomPage (e) {
-    TweenMax.to(pageNext, 1, {
-        scale:(10, 10),
-        ease : Power4.easeInOut, 
-    })
 
     TweenMax.to(fadeIn, 0.6 , {
         backgroundColor:"black", 
@@ -160,10 +156,14 @@ function zoomPage (e) {
         zIndex: 100,
         ease : Power4.easeInOut, 
     })
-    
+
+    TweenMax.to(pageNext, 1, {
+        scale:(10, 10),
+        ease : Power4.easeInOut, 
+    })
 
     setTimeout(function(){
-        window.location.href = "C:/Users/Administrator/git/Interactive_site/newsite.html";
+        window.location.href = "C:/Users/Administrator/git/Interactive_site/starryNight.html";
     }, 700);
 }
 
