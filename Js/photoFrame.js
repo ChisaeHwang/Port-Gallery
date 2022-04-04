@@ -150,7 +150,7 @@ function nextSite (e) {
 
 function zoomPage (e) {
 
-    TweenMax.to(fadeIn, 0.6 , {
+    TweenMax.to(fadeIn, .6 , {
         backgroundColor:"black", 
         opacity: 1,
         zIndex: 100,
@@ -164,7 +164,7 @@ function zoomPage (e) {
 
     setTimeout(function(){
         window.location.href = "C:/Users/Administrator/git/Interactive_site/starryNight.html";
-    }, 700);
+    }, 750);
 }
 
 resize();

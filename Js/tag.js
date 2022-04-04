@@ -64,19 +64,19 @@ function changeImg(event){
 
      switch(photoNum){
           case 0:
-               takePhoto[0].style.background = "url(img/" + photoArr[2] +")";
-               takePhoto[1].style.background = "url(img/" + photoArr[0] +")";
-               takePhoto[2].style.background = "url(img/" + photoArr[1] +")";
+               takePhoto[0].style.background = `url(img/${photoArr[2]})`;
+               takePhoto[1].style.background = `url(img/${photoArr[0]})`;
+               takePhoto[2].style.background = `url(img/${photoArr[1]})`;
                break;
           case 1:
-               takePhoto[0].style.background = "url(img/" + photoArr[0] +")";
-               takePhoto[1].style.background = "url(img/" + photoArr[1] +")";
-               takePhoto[2].style.background = "url(img/" + photoArr[2] +")";
+               takePhoto[0].style.background = `url(img/${photoArr[0]})`;
+               takePhoto[1].style.background = `url(img/${photoArr[1]})`;
+               takePhoto[2].style.background = `url(img/${photoArr[2]})`;
                break;
           case 2:
-               takePhoto[0].style.background = "url(img/" + photoArr[1] +")";
-               takePhoto[1].style.background = "url(img/" + photoArr[2] +")";
-               takePhoto[2].style.background = "url(img/" + photoArr[0] +")";
+               takePhoto[0].style.background = `url(img/${photoArr[1]})`;
+               takePhoto[1].style.background = `url(img/${photoArr[2]})`;
+               takePhoto[2].style.background = `url(img/${photoArr[0]})`;
                
      }
 }
