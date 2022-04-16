@@ -4,6 +4,7 @@ const takePhoto = document.querySelectorAll(".photo");
 const artBtn = document.querySelectorAll("button");
 
 var photoArr = ["photo1.png", "photo2.png", "photo3.png"];
+
 // map 함수 이용해서 링크 이동
 
 function* countNum(i) {
