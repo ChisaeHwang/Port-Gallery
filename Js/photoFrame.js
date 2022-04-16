@@ -5,8 +5,8 @@ const pageNext = document.querySelector(".backimg");
 const fadeIn = document.querySelector(".all");
 var pageNum = 4; 
 
-let galwidth = $(gallery).width();
-let galheight = $(gallery).height();
+let galwidth = 1200;
+let galheight = 900;
 
 let btnOver = false;
 let zoom;

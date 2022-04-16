@@ -23,10 +23,7 @@ engine.world.gravity.y = 2.5;;
 
 let light = false;
 
-let width = $(pageNext).width();
-let height = $(pageNext).height();
-
-var lamp = Bodies.circle(width/2, 210, 20, {
+var lamp = Bodies.circle(600, 210, 20, {
   density: 0.0005,
             frictionAir: 0.06,
             restitution: 0.3,
@@ -49,8 +46,8 @@ var render = Render.create({
     element: document.querySelector('.backimg'),
     engine: engine,
     options: {
-      width: width,
-      height: height,
+      width: 1200,
+      height: 900,
       wireframes: false,
       background: 'transparent',
       wireframeBackground: 'transparent',
@@ -84,7 +81,7 @@ clickText[0].addEventListener("click", (e) => {
 
 function createLamp(){
 
-  var ropeB = Composites.stack(width/2, 100, 10, 1, 20, 20, function(x, y) {
+  var ropeB = Composites.stack(600, 100, 10, 1, 20, 20, function(x, y) {
     return Bodies.rectangle(x , y, 17, 3, {
       collisionFilter: { 
        group: -1
