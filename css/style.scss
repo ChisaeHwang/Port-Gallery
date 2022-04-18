@@ -99,6 +99,7 @@ main{
 
 .buttonWrap {
 
+    display: flex;
     position: absolute;
     bottom : -50px;
     left: 50%;
@@ -107,6 +108,7 @@ main{
     button {
         position : relative;
         z-index : 100;
+        width: 5rem;
         margin : 0 5px;
         background:black;
         color: #fff;
