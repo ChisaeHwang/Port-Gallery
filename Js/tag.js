@@ -42,7 +42,7 @@ function offImg(event){
      document.querySelector(".lightShadow").style.transition = "0s";
      for (var i=0; i<photoArr.length; i++){
           takePhoto[i].style.background = "none";
-          takePhoto[i].style.opacity = "0"
+          takePhoto[i].style.opacity = "0";
      }
 
      artBtn.forEach(function(item, i){

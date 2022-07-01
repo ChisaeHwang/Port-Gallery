@@ -163,7 +163,7 @@ function zoomPage (e) {
     })
 
     setTimeout(function(){
-        window.location.href = "C:/Users/Administrator/git/Interactive_site/starryNight.html";
+        window.location.href = "https://astonishing-piroshki-ce97dd.netlify.app/";
     }, 750);
 }
 
