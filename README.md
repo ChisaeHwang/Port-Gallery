@@ -2,6 +2,8 @@
 
 Port_Gallery는 여러 Portfolio를 Gallery의 형태로 소개할 수 있는 사이트 입니다.
 
+https://port-gallery.netlify.app/
+
 
 ![index1](https://user-images.githubusercontent.com/85073718/160553307-a751001c-4e7b-47e9-b137-72229e83d461.PNG)
 
