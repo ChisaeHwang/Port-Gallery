@@ -4,6 +4,8 @@ Port_Gallery는 여러 Portfolio를 Gallery의 형태로 소개할 수 있는 �
 
 https://port-gallery.netlify.app/
 
+사이트 접속 후, 전구를 클릭하시면 더 흥미로울 수 있습니다.
+
 
 ![index1](https://user-images.githubusercontent.com/85073718/160553307-a751001c-4e7b-47e9-b137-72229e83d461.PNG)
 
